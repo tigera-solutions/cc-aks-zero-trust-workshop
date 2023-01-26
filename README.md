@@ -35,12 +35,11 @@ This workshop is organized in sequential modules. One module will build up on to
  
 Module 1 - [Getting Started](/modules/module-2-getting-started.md)  
 Module 2 - [Deploy an Azure AKS cluster](/modules/module-2-deploy-aks.md)  
-Module 3 - [Connect the AWS EKS cluster to Calico Cloud](/modules/module-4-connect-calicocloud.md)  
-Module 4 - [Create the test environment](/modules/module-5-test-environment.md)  
-Module 5 - [Enable egress gateway support](/modules/module-6-egw-support.md)  
-Module 6 - [Deploy Egress Gateway and use a pod selector](/modules/module-7-egw-perpod.md)  
-Module 7 - [Deploy Egress Gateway and use a namespace selector](/modules/module-8-egw-pernamespace.md)  
-Module 8 - [Deploy Egress Gateway with an AWS elastic IP](/modules/module-9-egw-elastic-ip.md)  
-Module 9 - [Clean up](/modules/module-10-clean-up.md)  
+Module 3 - [Connect the AWS EKS cluster to Calico Cloud](/modules/module-3-connect-calicocloud.md)  
+Module 4 - [Create the test environment](/modules/module-4-segmentation.md)  
+Module 5 - [Enable egress gateway support](/modules/module-5-fqdn.md)  
+Module 6 - [Deploy Egress Gateway and use a pod selector](/modules/module-6-identity-aware-microsegmentation.md)  
+Module 7 - [Deploy Egress Gateway and use a namespace selector](/modules/module-7-zero-trust-application.md)   
+Module 8 - [Clean up](/modules/module-8-clean-up.md)  
 
 > **Note**: The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how Calico Cloud can be configured to build a functional solution. These examples are not intended for use in production environments.
