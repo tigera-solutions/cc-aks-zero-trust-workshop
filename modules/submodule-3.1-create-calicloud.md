@@ -10,3 +10,6 @@
 
 This concludes the Calico Cloud trial account creation. You can log in back at any time using the "**Login as an Existing User**" link in the [Calico Cloud](https://www.calicocloud.io/) website.
 
+---
+
+[:leftwards_arrow_with_hook: Back to Module 3 - Connect to Calico Cloud](modules/module-3-connect-calicocloud.md) 
