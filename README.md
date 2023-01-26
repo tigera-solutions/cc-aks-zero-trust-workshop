@@ -33,13 +33,31 @@ The estimated time to complete this workshop is 60-90 minutes.
 
 This workshop is organized in sequential modules. One module will build up on top of the previous module, so please, follow the order as proposed below.
  
-Module 1 - [Getting Started](/modules/module-2-getting-started.md)  
+Module 1 - [Getting Started](/modules/module-1-getting-started.md)  
 Module 2 - [Deploy an Azure AKS cluster](/modules/module-2-deploy-aks.md)  
 Module 3 - [Connect the AWS EKS cluster to Calico Cloud](/modules/module-3-connect-calicocloud.md)  
-Module 4 - [Create the test environment](/modules/module-4-segmentation.md)  
-Module 5 - [Enable egress gateway support](/modules/module-5-fqdn.md)  
-Module 6 - [Deploy Egress Gateway and use a pod selector](/modules/module-6-identity-aware-microsegmentation.md)  
-Module 7 - [Deploy Egress Gateway and use a namespace selector](/modules/module-7-zero-trust-application.md)   
+Module 4 - [Segmentation and Workload Access Control](/modules/module-4-segmentation.md)  
+Module 5 - [Ingress and Egress access control using NetworkSets](/modules/module-5-fqdn.md)  
+Module 6 - [Identity-aware Microsegmentation](/modules/module-6-identity-aware-microsegmentation.md)  
+Module 7 - [Zero-trust security controls at application level](/modules/module-7-zero-trust-application.md)   
 Module 8 - [Clean up](/modules/module-8-clean-up.md)  
+
+--- 
+
+### Useful links
+
+- [Project Calico](https://www.tigera.io/project-calico/)
+- [Calico Academy - Get Calico Certified!](https://academy.tigera.io/)
+- [O’REILLY EBOOK: Kubernetes security and observability](https://www.tigera.io/lp/kubernetes-security-and-observability-ebook)
+- [Calico Users - Slack](https://slack.projectcalico.org/)
+
+**Follow us on social media**
+
+- [LinkedIn](https://www.linkedin.com/company/tigera/)
+- [Twitter](https://twitter.com/tigeraio)
+- [YouTube](https://www.youtube.com/channel/UC8uN3yhpeBeerGNwDiQbcgw/)
+- [Slack](https://calicousers.slack.com/)
+- [Github](https://github.com/tigera-solutions/)
+- [Discuss](https://discuss.projectcalico.tigera.io/)
 
 > **Note**: The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how Calico Cloud can be configured to build a functional solution. These examples are not intended for use in production environments.
