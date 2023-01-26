@@ -1,15 +1,14 @@
 # Module 3 - Connect your cluster to Calico Cloud
 
-> **Note**: In order to complete this module, you will need to a [Calico Cloud account](https://www.calicocloud.io/). If you are participating in a live workshop, you will receive an invite with the information for connecting to an active Calico Cloud environment and join your AKS cluster in there.
+> **Note**: In order to complete this module, you will need to a [Calico Cloud account](https://www.calicocloud.io/). If you are participating in a live workshop, you will receive an invite with the information to login into an active Calico Cloud environment and join your AKS cluster in there.
 
-If you are running this workshop in a self-paced mode, you can create an Calico Cloud environment following the steps [here](modules/).  
+If you are running this workshop in a self-paced mode, you can create an Calico Cloud environment following the steps [here](/modules/submodule-3.1-create-calicloud.md).  
 
 Issues with being unable to navigate menus in the UI are often due to browsers blocking scripts - please ensure that you disabled all blocker scripts.
 
+Once you have access to your **Calico Cloud** environment, go to step 1:
 
-
-
-## Step 2 - Connecting your cluster to Calico Cloud.
+## Step 1 - Connecting your cluster to Calico Cloud.
 
 1. When returning to the [Calico Cloud](https://www.calicocloud.io/) website, use the "Login as an Existing User" link, enter your e-mail and password to log back into your trial environment. The welcome screen will allow you to choose among four use cases and will provide a guided tour for each use case. After that you can proceed to connect your first cluster. This option directs you to the **Managed Clusters** section. Click on the "**Connect Cluster**" button to start the process.
 
@@ -69,7 +68,7 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
 
     ![installing](https://user-images.githubusercontent.com/104035488/188036070-71cd3cb7-639b-46f2-bd5e-dbdb401b48e3.gif)
 
-## STEP 3 - Selecting your cluster.
+## STEP 2 - Selecting your cluster.
 
 Once the installation is completed, you will be able to start interacting with your cluster from the Calico Cloud interface. Calico Cloud provides a single pane of glass for managing multiple clusters. If you followed the previous steps, you would have two clusters connected to Calico Cloud at this point: Your cluster and a pre-configured lab cluster that allows you to explore some of the features in Calico Cloud.
 
@@ -88,7 +87,7 @@ When you change the cluster, the whole Calico Cloud context will change immediat
 
 --- 
 
-[:arrow_right: Module 5 - Create the test environment](/modules/module-5-test-environment.md)  <br>
+[:arrow_right: Module 4 - Segmentation and Workload Access Control](/modules/module-4-segmentation.md)   <br>
 
-[:arrow_left: Module 3 - Deploy an AWS EKS cluster using Calico CNI](/modules/module-3-deploy-eks.md)  
+[:arrow_left: Module 2 - Deploy an Azure AKS cluster](/modules/module-2-deploy-aks.md)  
 [:leftwards_arrow_with_hook: Back to Main](/README.md)  
