@@ -9,12 +9,15 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
 
 1. During the workshop, you will receive an invitation to connect to a Calico Cloud organization, just like in the picture below:
  
+   ![accept_invitation](https://user-images.githubusercontent.com/104035488/215204989-66b666d9-5e93-45b5-a0c5-2236b135af31.png)
+
+
    <img width="1021" alt="ACCEPT INVITATION" src="https://user-images.githubusercontent.com/104035488/215204989-66b666d9-5e93-45b5-a0c5-2236b135af31.png">
 
    
 2. Click on the link ACCEPT INVITATION and create an password to access the Calico Cloud.
 
-   <img width="399" alt="create a password" src="https://user-images.githubusercontent.com/104035488/215205017-0a41f506-5c91-4830-9249-677c6a06fb3b.png">
+   <img width="300" alt="create a password" src="https://user-images.githubusercontent.com/104035488/215205017-0a41f506-5c91-4830-9249-677c6a06fb3b.png">
 
 3. Once you have access to your **Calico Cloud** environment, go to step 2:
 
