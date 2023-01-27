@@ -107,14 +107,14 @@
    ```bash
    VMSSGROUP=$(az vmss list --output table | grep -i $RESOURCE_GROUP | awk -F ' ' '{print $2}')
    VMSSNAME=$(az vmss list --output table | grep -i $RESOURCE_GROUP | awk -F ' ' '{print $1}')
-   az vmss run-command invoke -g $VMSSGROUP -n $VMSSNAME --scripts "cat /etc/cni/net.d/*" --command-id RunShellScript --instance-id 0 --query 'value[0].message'
+   az vmss run-command invoke -g $VMSSGROUP -n $VMSSNAME --scripts "cat /etc/cni/net.d/*" --command-id RunShellScript --instance-id 0 --query 'value[0].message' --ouput table
    ```
    
    > output should contain "mode": "transparent"
 
 ---
 
-[:arrow_right: Module 3 - Connect the AWS EKS cluster to Calico Cloud](/modules/module-3-connect-calicocloud.md) <br>
+[:arrow_right: Module 3 - Connect the Azure AKS cluster to Calico Cloud](/modules/module-3-connect-calicocloud.md) <br>
 
 [:arrow_left: Module 1 - Getting Started](/modules/module-1-getting-started.md)  
 [:leftwards_arrow_with_hook: Back to Main](/README.md)  

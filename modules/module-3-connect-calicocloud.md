@@ -1,4 +1,4 @@
-# Module 3 - Connect your cluster to Calico Cloud
+# Module 3 - Connect your AKS cluster to Calico Cloud
 
 > **Note**: In order to complete this module, you will need to a [Calico Cloud account](https://www.calicocloud.io/). If you are participating in a live workshop, you will receive an invite with the information to login into an active Calico Cloud environment and join your AKS cluster in there.
 
@@ -87,7 +87,7 @@ When you change the cluster, the whole Calico Cloud context will change immediat
 
 --- 
 
-[:arrow_right: Module 4 - Segmentation and Workload Access Control](/modules/module-4-segmentation.md)   <br>
+[:arrow_right: Module 4 - Workload Access Control](/modules/module-4-workload-access-control.md)   <br>
 
 [:arrow_left: Module 2 - Deploy an Azure AKS cluster](/modules/module-2-deploy-aks.md)  
 [:leftwards_arrow_with_hook: Back to Main](/README.md)  

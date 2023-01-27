@@ -1,4 +1,4 @@
-# Segmentation and Workload Access Control
+# Workload Access Control
 
 **Goal:** Leverage network policies to segment connections within Kubernetes cluster.
 

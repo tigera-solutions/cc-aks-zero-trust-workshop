@@ -36,7 +36,7 @@ This workshop is organized in sequential modules. One module will build up on to
 Module 1 - [Getting Started](/modules/module-1-getting-started.md)  
 Module 2 - [Deploy an Azure AKS cluster](/modules/module-2-deploy-aks.md)  
 Module 3 - [Connect the AWS EKS cluster to Calico Cloud](/modules/module-3-connect-calicocloud.md)  
-Module 4 - [Zero-Trust Workload Access Control](/modules/module-4-segmentation.md)  
+Module 4 - [Zero-Trust Workload Access Control](/modules/module-4-workload-access-control.md)  
 Module 5 - [Ingress and Egress access control using NetworkSets](/modules/module-5-fqdn.md)  
 Module 6 - [Identity-aware Microsegmentation](/modules/module-6-identity-aware-microsegmentation.md)  
 Module 7 - [Zero-trust security controls at application level](/modules/module-7-zero-trust-application.md)   
