@@ -1,4 +1,4 @@
-# Azure AKS Cluster Creation - Azure CNI for Calico Cloud
+# Deploy an Azure AKS Cluster
 
 1. Define the environment variables to be used by the resources definition.
 
