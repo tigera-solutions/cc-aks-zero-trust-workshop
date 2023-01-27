@@ -43,15 +43,19 @@
 
    ```bash
    az aks list -o table
-   # Or
+   ```
+   Or
+   ```bash
    watch az aks list -o table
    ```
+   
+   You may get an output like the following
 
-   ```bash
-      Name            Location    ResourceGroup      KubernetesVersion    ProvisioningState    Fqdn
-      --------------  ----------  -----------------  -------------------  -------------------  ----------------------------------------------------------------
-      aks25415        eastus      aks-rg-25415       1.23.5               Succeeded            aks25415-aks-rg-25415-62afe9-3a0152d0.hcp.eastus.azmk8s.io
-   ```
+   <pre>
+   Name                     Location       ResourceGroup              KubernetesVersion    CurrentKubernetesVersion    ProvisioningState    Fqdn
+   -----------------------  -------------  -------------------------  -------------------  --------------------------  -------------------  -----------------------------------------------------------------------
+   aks-zero-trust-workshop  canadacentral  rg-zero-trust-workshop     1.23                 1.23.12                     Succeeded            aks-zero-t-rg-zero-trust-wo-03cfb8-b3feb0f8.hcp.canadacentral.azmk8s.io
+   </pre>
 
 5. Get the credentials to connect to the cluster.
    
