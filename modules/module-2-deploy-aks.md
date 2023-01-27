@@ -72,10 +72,9 @@
    The output will ne something similar to the this:
 
    <pre>
-   NAME                                STATUS   ROLES   AGE     VERSION
-   aks-nodepool1-25335207-vmss000000   Ready    agent   2m1s    v1.23.5
-   aks-nodepool1-25335207-vmss000001   Ready    agent   2m5s    v1.23.5
-   aks-nodepool1-25335207-vmss000002   Ready    agent   2m13s   v1.23.5
+   NAME                                STATUS   ROLES   AGE   VERSION
+   aks-nodepool1-10832039-vmss000000   Ready    agent   18h   v1.23.12
+   aks-nodepool1-10832039-vmss000002   Ready    agent   74m   v1.23.12
    </pre>
 
    To see more details about your cluster:
@@ -84,11 +83,11 @@
     kubectl cluster-info
    ```
 
-   The    The output will ne something similar to the this:
+   The output will ne something similar to the this:
    <pre>
-   Kubernetes control plane is running at https://akssteve10-aks-rg-steve1075-62afe9-631a3ab4.hcp.eastus.azmk8s.io:443
-   CoreDNS is running at https://akssteve10-aks-rg-steve1075-62afe9-631a3ab4.hcp.eastus.azmk8s.io:443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-   Metrics-server is running at https://akssteve10-aks-rg-steve1075-62afe9-631a3ab4.hcp.eastus.azmk8s.io:443/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy
+   Kubernetes control plane is running at https://aks-zero-t-rg-zero-trust-wo-03cfb8-b3feb0f8.hcp.canadacentral.azmk8s.io:443
+   CoreDNS is running at https://aks-zero-t-rg-zero-trust-wo-03cfb8-b3feb0f8.hcp.canadacentral.azmk8s.io:443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+   Metrics-server is running at https://aks-zero-t-rg-zero-trust-wo-03cfb8-b3feb0f8.hcp.canadacentral.azmk8s.io:443/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy
 
    To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
    </pre>
