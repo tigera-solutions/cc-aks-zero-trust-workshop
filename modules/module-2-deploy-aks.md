@@ -39,7 +39,7 @@
      --network-plugin azure
    ```
 
-4.  Verify your cluster status. The `ProvisioningState` should be `Succeeded`
+4. Verify your cluster status. The `ProvisioningState` should be `Succeeded`
 
    ```bash
    az aks list -o table
