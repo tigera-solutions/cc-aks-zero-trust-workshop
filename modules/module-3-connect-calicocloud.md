@@ -10,10 +10,6 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
 1. During the workshop, you will receive an invitation to connect to a Calico Cloud organization, just like in the picture below:
  
    ![accept_invitation](https://user-images.githubusercontent.com/104035488/215204989-66b666d9-5e93-45b5-a0c5-2236b135af31.png)
-
-
-   <img width="1021" alt="ACCEPT INVITATION" src="https://user-images.githubusercontent.com/104035488/215204989-66b666d9-5e93-45b5-a0c5-2236b135af31.png">
-
    
 2. Click on the link ACCEPT INVITATION and create an password to access the Calico Cloud.
 
@@ -63,7 +59,10 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
 
     ```bash
     kubectl get tigerastatus                                                                                                                    
-
+    ```
+    
+    > Output should look similar to:
+    <pre>
     NAME                            AVAILABLE   PROGRESSING   DEGRADED   SINCE
     apiserver                       True        False         False      96s
     calico                          True        False         False      16s
@@ -72,7 +71,7 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
     log-collector                   True        False         False      21s
     management-cluster-connection   True        False         False      51s
     monitor                         True        False         False      2m1s
-    ```
+    </pre>
 
     You can also monitor your cluster installation on the Calico Cloud UI. Go to the "**Managed Clusters**" section, select your cluster and expand the timestamp dropdown to see the installation logs.
     In a few minutes the status will change from **Installing** to **Done**. Congratulations! You successfully connected your cluster to Calico Cloud.

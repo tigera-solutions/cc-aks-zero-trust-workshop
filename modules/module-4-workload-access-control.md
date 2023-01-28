@@ -1,8 +1,17 @@
-# Workload Access Control
+# Zero Trust Workload Access Control
 
-**Goal:** Leverage network policies to segment connections within Kubernetes cluster.
+In this module, we will learn how to use Calico to create network policies to control access to and from a pod. For this, we will install two example applications: The Online Boutique and the Dev environment. Once the applications are deployed, we will create and test network security policies with different ingress and egress rules to demonstrate how the **workload access control** is done.
 
-## Steps
+## Instructions
+
+1. Installing the example applications:
+
+   From the cloned directory, execute:
+   ```
+   kubectl apply -f pre
+   ```
+
+   > **Note**: Wait until all the pods are up and running to move to the next step.
 
 1. Test connectivity between application components and across application stacks. All of these tests should succeed as there are no policies in place.
 
@@ -61,7 +70,6 @@
     kubectl apply -f demo/app-control/default.centos.yaml
 
     ```
-
 
 4. Test connectivity with policies in place.
 

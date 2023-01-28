@@ -1,0 +1,7 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: dev
+  labels:
+    compliance: open
+    environment: development
