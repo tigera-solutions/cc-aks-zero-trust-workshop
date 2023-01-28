@@ -1,10 +1,10 @@
-# Module 5 - Identity-Aware Micro-segmentation
+# Module 5 - Identity-Aware Microsegmentation
 
 Calico eliminates the risks associated with lateral movement in the cluster to prevent access to sensitive data and other assets. Calico provides a unified, cloud-native segmentation model and single policy framework that works seamlessly across multiple application and workload environments. It enables faster response to security threats with a cloud-native architecture that can dynamically enforce security policy changes across cloud environments in milliseconds in response to an attack.
 
 ## Security Policy Tiers
 
-Tiers are a hierarchical construct used to group policies and enforce higher precedence policies that other teams cannot circumvent, providing the basis for **Identity-aware micro-segmentation**. 
+Tiers are a hierarchical construct used to group policies and enforce higher precedence policies that other teams cannot circumvent, providing the basis for **Identity-aware microsegmentation**. 
 
 All Calico and Kubernetes security policies reside in tiers. You can start “thinking in tiers” by grouping your teams and the types of policies within each group. The command below will create three tiers (quarantine, platform, and security):
 
