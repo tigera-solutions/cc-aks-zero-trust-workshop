@@ -116,7 +116,7 @@ The NetworkSet can also be used to block access from a specific ip address or ci
    a. Test the access to the frontend-external service
 
    ```bash
-   curl -sI -m3 $(kubectl get svc frontend-external -ojsonpath='{.status.loadBalancer.ingress[0].hostname}') | grep -i http
+   curl -sI -m3 $(kubectl get svc frontend-external -ojsonpath='{.status.loadBalancer.ingress[0].ip}') | grep -i http
    ```
    
    b. Identify your workstation ip address and store it in a environment variable
@@ -193,7 +193,7 @@ The NetworkSet can also be used to block access from a specific ip address or ci
    a. Test the access to the frontend-external service. It is blocked now. Wait a few minutes and check the `Activity > Alerts`.
 
    ```bash
-   curl -sI -m3 $(kubectl get svc frontend-external -ojsonpath='{.status.loadBalancer.ingress[0].hostname}') | grep -i http
+   curl -sI -m3 $(kubectl get svc frontend-external -ojsonpath='{.status.loadBalancer.ingress[0].ip}') | grep -i http
    ```
 
 ---
