@@ -178,7 +178,7 @@ We recommend that you create a global default deny policy after you complete wri
 
 --- 
 
-[:arrow_right: Module 5 - Ingress and Egress access control using NetworkSets](/modules/module-5-network-sets.md)  <br>
+[:arrow_right: Module 5 - Identity-aware Microsegmentation](/modules/module-5-identity-aware-microsegmentation.md)  <br>
 
 [:arrow_left: Module 3 - Connect the AWS EKS cluster to Calico Cloud](/modules/module-3-connect-calicocloud.md)  
 [:leftwards_arrow_with_hook: Back to Main](/README.md)  
