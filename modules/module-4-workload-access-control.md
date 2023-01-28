@@ -23,7 +23,7 @@ Connect to Calico Cloud GUI. From the menu select `Service Graph > Flow Visualiz
 
 ![flow-visualization](https://user-images.githubusercontent.com/104035488/192358472-112c832f-2fd7-4294-b8cc-fec166a9b11e.gif)
 
-## Security Policies
+## Network Security Policies
 
 Calico Security Policies provide a richer set of policy capabilities than Kubernetes network policies including:  
 
@@ -178,7 +178,7 @@ We recommend that you create a global default deny policy after you complete wri
 
 --- 
 
-[:arrow_right: Module 3 - Connect the AWS EKS cluster to Calico Cloud](/modules/module-3-connect-calicocloud.md)  <br>
+[:arrow_right: Module 5 - Ingress and Egress access control using NetworkSets](/modules/module-5-network-sets.md)  <br>
 
-[:arrow_left: Module 5 - Ingress and Egress access control using NetworkSets](/modules/module-5-network-sets.md)  
+[:arrow_left: Module 3 - Connect the AWS EKS cluster to Calico Cloud](/modules/module-3-connect-calicocloud.md)  
 [:leftwards_arrow_with_hook: Back to Main](/README.md)  

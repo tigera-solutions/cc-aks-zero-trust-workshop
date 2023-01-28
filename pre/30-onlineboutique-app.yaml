@@ -251,8 +251,8 @@ spec:
             value: "adservice:9555"
           # # ENV_PLATFORM: One of: local, gcp, aws, azure, onprem, alibaba
           # # When not set, defaults to "local" unless running in GKE, otherwies auto-sets to gcp 
-          # - name: ENV_PLATFORM 
-          #   value: "aws"
+          - name: ENV_PLATFORM 
+            value: "azure"
           - name: DISABLE_TRACING
             value: "0"
           - name: DISABLE_PROFILER
@@ -269,6 +269,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend
+  annotations:
+    projectcalico.org/l7-logging: "true"
 spec:
   type: ClusterIP
   selector:
@@ -282,6 +284,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend-external
+  annotations:
+    projectcalico.org/l7-logging: "true"
 spec:
   type: LoadBalancer
   externalTrafficPolicy: Local

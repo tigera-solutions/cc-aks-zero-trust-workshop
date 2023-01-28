@@ -97,7 +97,7 @@ When you change the cluster, the whole Calico Cloud context will change immediat
 
 --- 
 
-[:arrow_right: Module 4 - Workload Access Control](/modules/module-4-workload-access-control.md)   <br>
+[:arrow_right: Module 4 - Zero Trust Workload Access Control](/modules/module-4-workload-access-control.md)   <br>
 
 [:arrow_left: Module 2 - Deploy an Azure AKS cluster](/modules/module-2-deploy-aks.md)  
 [:leftwards_arrow_with_hook: Back to Main](/README.md)  
