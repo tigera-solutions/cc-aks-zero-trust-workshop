@@ -1,17 +1,30 @@
-7. Clean up
+# Module 8 - Clean up
 
-   Delete the AKS cluster
+1. Delete the example application stacks
+
+   ```bash
+   kubectl delete -f pre/20-dev-app.yaml
+   kubectl delete -f pre/30-onlineboutique-app.yaml
+   ```
+
+2. Delete the AKS cluster
    
    ```bash
    az aks delete \
      --resource-group $RESOURCE_GROUP \
-     --name $CLUSTER_NAME
+     --name $CLUSTERNAME
    ```
 
-   Delete the resource group
+3. Delete the resource group
    
    ```bash
    az group delete \
      --name $RESOURCE_GROUP \
      --location $LOCATION
    ```
+
+---
+
+[:leftwards_arrow_with_hook: Back to Main](/README.md)  <br>
+
+[:arrow_left: Module 7 - Zero-trust security controls at application level](/modules/module-7-zero-trust-application.md)  

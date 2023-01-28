@@ -1,7 +1,6 @@
-### Ingress and Egress access control using NetworkSets
+# Module 5 - Ingress and Egress access control using NetworkSets
 
-
-
+It's also possible to create network policies for controlling access from and to a specific domain name, or a list of domain names and ip addresses. Let's create some policies to verify this control in action.
 
 1. Implement DNS policy to allow the external endpoint access from a specific workload, e.g. `dev/centos`.
 
@@ -61,9 +60,9 @@
    kind: GlobalNetworkSet
    apiVersion: projectcalico.org/v3
    metadata:
-     name: allowed-dns
+     name: allowed-api
      labels: 
-       type: allowed-dns
+       type: allowed-api
    spec:
      allowedEgressDomains:
      - '*.twilio.com'
@@ -87,7 +86,7 @@
      egress:
      - action: Allow
        destination:
-         selector: type == "allowed-dns"
+         selector: type == "allowed-api"
    EOF
    ```
 
@@ -110,12 +109,14 @@
    kubectl -n dev exec -t centos -- sh -c 'curl -m3 -skI https://www.google.com 2>/dev/null | grep -i http'
    ```
 
-3. The NetworkSet can also be used to block access from a specific ip address or cidr to an endpoint in your cluster. To demonstrate it, we are going to block the access from your workstation to the Online Boutique frontend-external service.
+## Ingress Policies using NetworkSets
+
+The NetworkSet can also be used to block access from a specific ip address or cidr to an endpoint in your cluster. To demonstrate it, we are going to block the access from your workstation to the Online Boutique frontend-external service.
 
    a. Test the access to the frontend-external service
 
    ```bash
-   curl -sI -m3 $(kubectl get svc frontend-external -ojsonpath='{.status.loadBalancer.ingress[0].ip}') | grep -i http
+   curl -sI -m3 $(kubectl get svc frontend-external -ojsonpath='{.status.loadBalancer.ingress[0].hostname}') | grep -i http
    ```
    
    b. Identify your workstation ip address and store it in a environment variable
@@ -192,7 +193,12 @@
    a. Test the access to the frontend-external service. It is blocked now. Wait a few minutes and check the `Activity > Alerts`.
 
    ```bash
-   curl -sI -m3 $(kubectl get svc frontend-external -ojsonpath='{.status.loadBalancer.ingress[0].ip}') | grep -i http
+   curl -sI -m3 $(kubectl get svc frontend-external -ojsonpath='{.status.loadBalancer.ingress[0].hostname}') | grep -i http
    ```
 
 ---
+
+[:arrow_right: Module 7 - Zero-trust security controls at application level](/modules/module-7-zero-trust-application.md)   <br>
+
+[:arrow_left: Module 5 - Ingress and Egress access control using NetworkSets](/modules/module-5-network-sets.md)   
+[:leftwards_arrow_with_hook: Back to Main](/README.md)  
