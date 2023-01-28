@@ -108,31 +108,9 @@ For more information about tiers, please refer to the Calico Cloud documentation
 
 4. Use the Calico Cloud GUI to enforce the default-deny staged policy. After enforcing a staged policy, it takes effect immediatelly. The default-deny policy will start to actually deny traffic. 
 
----
-
-## Security Policy Recommender
-
-Notice that the Online Botique web site stop responding. That is because we didnt deploy any policy for the `frontend` worload.
-
-Let's see how Calico can help us to build a security policy in order to allow the traffic to frontend service.
-
-Click in the Policy Recommendation button in the Policy Board:
-
-![recommend-a-policy](https://user-images.githubusercontent.com/104035488/206473864-f70ac0dd-d50d-46e1-b95b-d0153c154a79.png)
-
-Now select the time range you will look back in the flow logs to recommend a policy based on them. Select the namespace of the application we want the recommended policy for (default), and the right service (frontend-XXXXXX-*).
-
-When you click on the "Recommend" button in the top right corner, you will see that Calico recommends to open the traffic to port 8080 on Ingress, so we would be able to reach the frontend application again. There is also lots of other ingress and egress rules that will be created. Click on "Enforce", and then the "Back" button.
-  
-The policy will be created at the end of your policy chain (at the bottom of the default Tier). You must move the policy to the right order, so it can have effect. In our case, as we would like to hit this policy before the pci isolation policy is done (so we are able to reach the customer service before it is isolated), drag and drop the policy in the board to the right place as indicated by the figure below:
-
-![move-policy](https://user-images.githubusercontent.com/104035488/206474337-cad7d5ef-da72-4845-97ee-8911e3249e62.png)
-
-Now you should be able to access the Online Boutique application in your browser.
-
 --- 
 
-[:arrow_right: Module 6 - Identity-aware Microsegmentation](/modules/module-6-identity-aware-microsegmentation.md)  <br>
+[:arrow_right: Module 6 - Ingress and Egress access control using NetworkSets](/modules/module-6-network-sets.md)  <br>
 
 [:arrow_left: Module 4 - Workload Access Control](/modules/module-4-workload-access-control.md)  
 [:leftwards_arrow_with_hook: Back to Main](/README.md)  
