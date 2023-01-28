@@ -50,7 +50,7 @@ For more information about tiers, please refer to the Calico Cloud documentation
      namespace: dev
    spec:
      tier: platform
-     order: 100
+     order: 300
      selector: app == "centos"
      egress:
        - action: Allow
@@ -60,8 +60,11 @@ For more information about tiers, please refer to the Calico Cloud documentation
            selector: app == "frontend"
            namespaceSelector: projectcalico.org/name == "default"
        - action: Pass
+     ingress:
+       - action: Pass  
      types:
        - Egress
+       - Ingress
    EOF
    ```
 
