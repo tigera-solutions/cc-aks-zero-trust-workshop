@@ -193,12 +193,12 @@ The NetworkSet can also be used to block access from a specific ip address or ci
    a. Test the access to the frontend-external service. It is blocked now. Wait a few minutes and check the `Activity > Alerts`.
 
    ```bash
-   curl -sI -m3 $(kubectl get svc frontend-external -ojsonpath='{.status.loadBalancer.ingress[0].ip}') | grep -i http
+   curl -m3 $(kubectl get svc frontend-external -ojsonpath='{.status.loadBalancer.ingress[0].ip}')
    ```
 
 ---
 
-[:arrow_right: Module 7 - Zero-trust security controls at application level](/modules/module-7-zero-trust-application.md)   <br>
+[:arrow_right: Module 7 - Application Level Observability](/modules/module-7-application-observability.md)   <br>
 
 [:arrow_left: Module 5 - Ingress and Egress access control using NetworkSets](/modules/module-5-network-sets.md)   
 [:leftwards_arrow_with_hook: Back to Main](/README.md)  

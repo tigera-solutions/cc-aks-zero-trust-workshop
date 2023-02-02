@@ -39,7 +39,7 @@ Module 3 - [Connect the AWS EKS cluster to Calico Cloud](/modules/module-3-conne
 Module 4 - [Zero-Trust Workload Access Control](/modules/module-4-workload-access-control.md)  
 Module 5 - [Identity-aware Microsegmentation](/modules/module-5-identity-aware-microsegmentation.md)  
 Module 6 - [Ingress and Egress access control using NetworkSets](/modules/module-6-network-sets.md)   
-Module 7 - [Zero-trust security controls at application level](/modules/module-7-zero-trust-application.md)   
+Module 7 - [Application Level Observability](/modules/module-7-application-observability.md)    
 Module 8 - [Clean up](/modules/module-8-clean-up.md)  
 
 --- 
