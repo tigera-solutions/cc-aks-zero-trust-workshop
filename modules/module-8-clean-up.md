@@ -1,13 +1,13 @@
 # Module 8 - Clean up
 
-1. Delete the example application stacks
+1. Delete the example application stacks.
 
    ```bash
    kubectl delete -f pre/20-dev-app.yaml
    kubectl delete -f pre/30-onlineboutique-app.yaml
    ```
 
-2. Delete the AKS cluster
+2. Delete the AKS cluster.
    
    ```bash
    az aks delete \
@@ -15,12 +15,18 @@
      --name $CLUSTERNAME
    ```
 
-3. Delete the resource group
+3. Delete the resource group.
    
    ```bash
    az group delete \
      --name $RESOURCE_GROUP \
      --location $LOCATION
+   ```
+
+4. Delete environment variables backup file.
+
+   ```bash
+   rm ~/workshopvars.env
    ```
 
 ---
