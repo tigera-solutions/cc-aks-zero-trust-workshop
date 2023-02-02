@@ -80,5 +80,5 @@ The DNS dashboard summarizes DNS data and logs into metrics, providing high-leve
 
 [:arrow_right: Module 8 - Clean up](/modules/module-8-clean-up.md)    <br>
 
-[:arrow_left: Module 6 - Identity-aware Microsegmentation](/modules/module-6-identity-aware-microsegmentation.md)   
+[:arrow_left: Module 6 - Ingress and Egress access control using NetworkSets](/modules/module-6-network-sets.md)    
 [:leftwards_arrow_with_hook: Back to Main](/README.md)  
