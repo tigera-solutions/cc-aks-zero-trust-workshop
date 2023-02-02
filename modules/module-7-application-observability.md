@@ -1,4 +1,4 @@
-# Application Level Observability
+# Module 7 - Application Level Observability
 
 L7 logs capture application interactions from HTTP header data in requests. Data shows what is actually sent in communications between specific pods, providing more specificity than flow logs. (Flow logs capture data only from connections for workload interactions).
 

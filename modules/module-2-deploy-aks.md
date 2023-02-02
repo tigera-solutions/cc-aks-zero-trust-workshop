@@ -1,4 +1,4 @@
-# Deploy an Azure AKS Cluster
+# Module 2 - Deploy an Azure AKS Cluster
 
 1. Define the environment variables to be used by the resources definition.
 

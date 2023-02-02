@@ -1,4 +1,4 @@
-# Getting Started
+# Module 1 - Getting Started
 
 ## Prerequisites 
 
