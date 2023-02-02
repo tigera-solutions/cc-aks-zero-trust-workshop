@@ -56,6 +56,8 @@ In Kibana, click the hamburger icon in the top left corner, and select Analytics
 
 <img width="940" alt="kibana-dashboard-d9381464d517d33e2a99400ca8a3e048" src="https://user-images.githubusercontent.com/104035488/216352874-83d3dd93-0596-4791-b974-e18c0cd364c7.png">
 
+![kibana-dashboard](https://user-images.githubusercontent.com/104035488/216352874-83d3dd93-0596-4791-b974-e18c0cd364c7.png)
+
 ### L7 HTTP dashboard
 
 The L7 HTTP dashboard provides application performance metrics for inscope Kubernetes services. The data can assist service owners and platform personnel in assessing the health of cluster workloads without the need for a full service mesh. L7 logs are not enabled by default, and must be configured.
