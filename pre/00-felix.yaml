@@ -16,7 +16,7 @@ spec:
   l7LogsFlushInterval: 15s
   l7LogsFileAggregationHTTPHeaderInfo: IncludeL7HTTPHeaderInfo
   policySyncPathPrefix: /var/run/nodeagent
-  ---
+---
 apiVersion: operator.tigera.io/v1
 kind: ApplicationLayer
 metadata:

@@ -19,8 +19,7 @@
    
    ```bash
    az group delete \
-     --name $RESOURCE_GROUP \
-     --location $LOCATION
+     --name $RESOURCE_GROUP
    ```
 
 4. Delete environment variables backup file.
