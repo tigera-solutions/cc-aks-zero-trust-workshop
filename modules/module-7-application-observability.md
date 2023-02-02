@@ -6,7 +6,6 @@ Calico Cloud collects L7 logs by sending the selected traffic through an Envoy p
 
 L7 logs are visible in the Manager UI, service graph, in the HTTP tab.
 
-
 1. Configure the ApplicationLayer resource for L7 logs. Ensure that the collectLogs field is set to Enabled.
 
    ```yaml
