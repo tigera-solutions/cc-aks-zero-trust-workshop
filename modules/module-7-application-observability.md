@@ -6,7 +6,15 @@ Calico Cloud collects L7 logs by sending the selected traffic through an Envoy p
 
 L7 logs are visible in the Manager UI, service graph, in the HTTP tab.
 
-1. Configure the ApplicationLayer resource for L7 logs. Ensure that the collectLogs field is set to Enabled.
+1. Configure Felix for log data collection
+
+   Enable the Policy Sync API in Felix. For cluster-wide enablement, modify the default FelixConfiguration and set the field policySyncPathPrefix to /var/run/nodeagent.
+   
+   ```bash
+   kubectl patch felixconfiguration default --type='merge' -p '{"spec":{"policySyncPathPrefix":"/var/run/nodeagent"}}'
+   ```
+
+2. Configure the ApplicationLayer resource for L7 logs. Ensure that the collectLogs field is set to Enabled.
 
    ```yaml
    kubectl apply -f - <<-EOF
@@ -26,7 +34,7 @@ L7 logs are visible in the Manager UI, service graph, in the HTTP tab.
    
    Ensure that the daemonset progresses and l7-collector and envoy-proxy containers inside the daemonset are in a Running state.
 
-2. Select traffic for L7 log collection
+3. Select traffic for L7 log collection
 
    Annotate the frontend service to collect L7 logs as shown.
    
