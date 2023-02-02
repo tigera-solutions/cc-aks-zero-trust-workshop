@@ -42,7 +42,7 @@ In the Manager UI left navbar, click Service Graph.
 
 In the bottom pane you will see L7 logs in the HTTP tab.
 
-<image gif here>
+![http_logs](https://user-images.githubusercontent.com/104035488/216352791-bdbb8376-3b24-4590-81f4-a6b411c1a1cd.gif)
 
 ## Kibana dashboards and logs
 
@@ -54,22 +54,19 @@ In Manager UI, from the left navbar select, Kibana. A new browser tab opens into
 
 In Kibana, click the hamburger icon in the top left corner, and select Analytics, Dashboard.
 
-<Dashboard Image>
-
+<img width="940" alt="kibana-dashboard-d9381464d517d33e2a99400ca8a3e048" src="https://user-images.githubusercontent.com/104035488/216352874-83d3dd93-0596-4791-b974-e18c0cd364c7.png">
 
 ### L7 HTTP dashboard
 
 The L7 HTTP dashboard provides application performance metrics for inscope Kubernetes services. The data can assist service owners and platform personnel in assessing the health of cluster workloads without the need for a full service mesh. L7 logs are not enabled by default, and must be configured.
 
-<l7-dashboard>
+![l7-dashboard-c9ce16b14c131a58e2fe90ed9d05943a](https://user-images.githubusercontent.com/104035488/216352987-23be3658-2a66-437f-b791-31340971c287.png)
 
 ### DNS dashboard
 
 The DNS dashboard summarizes DNS data and logs into metrics, providing high-level information on the types of DNS lookups made, responses, and overall DNS performance. By default, DNS activity logs are captured only for requests/responses from Kubernetes built-in DNS services (CoreDNS). DNS activity to an external DNS server can be captured by configuring the parameter, dnsTrustedServers in Felix. DNS activity to Node local server is not supported.
 
-<dns-dashboard>
-
-
+![dns-dashboard-104f543e8fc607107d780a0ef29e093b](https://user-images.githubusercontent.com/104035488/216353120-e78261a0-cd5b-4b89-a171-4225608422c3.png)
 
 ---
 
