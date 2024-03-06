@@ -30,15 +30,11 @@ There are also other objects that will be created. We will learn about them late
 > [!IMPORTANT]
 > Wait until all the pods are up and running to move to the next step.
 
-## Service Graph and Flow Visualizer
+## Service Graph
 
 Connect to Calico Cloud GUI. From the menu, select `Service Graph > Default`. Explore the options.
 
 ![service_graph](https://user-images.githubusercontent.com/104035488/192303379-efb43faa-1e71-41f2-9c54-c9b7f0538b34.gif)
-
-Connect to Calico Cloud GUI. From the menu select `Service Graph > Flow Visualizations`. Explore the options.
-
-![flow-visualization](https://user-images.githubusercontent.com/104035488/192358472-112c832f-2fd7-4294-b8cc-fec166a9b11e.gif)
 
 ## The Zero Trust approach
 
@@ -48,16 +44,38 @@ By default, all traffic is allowed between the pods in a cluster. Let's start by
 
 We recommend creating a global default deny policy after you complete reviewing the policy for the traffic you want to allow. Use the stage policy feature to get your allowed traffic working as expected, then lock down the cluster to block unwanted traffic.
 
+## Enable policy recommendations
+
 1. In the left navbar in Manager UI, click **Policies, Recommendations**.
 2. On the opt-in page, click Enable Policy Recommendations.
 
-The Policy Recommendations board is automatically displayed.
+   The Policy Recommendations board is automatically displayed.
 
-![enable-policy-recommendation](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/56a8a8b3-654d-40f8-9e04-160ff1439efd)
+   ![enable-policy-recommendation](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/56a8a8b3-654d-40f8-9e04-160ff1439efd)
 
+   > [!NOTE]
+   > - A policy recommendation is generated for every namespace in your cluster    (unless namespaces are filtered out by an Admin using the selector in the    PolicyRecommendationScope resource).
+   > - Flow logs are continuously monitored for policy recommendations.
+   > - Recommended policies are continuously updated until you Add to policy board    or Dismiss policy using the Actions menu.
+   > - Policy recommendations are created as staged network policies so you can    safely observe the traffic before enforcing them.
+   > - Traffic originating from the recommended policy's namespace is used to    generate egress rules, and traffic destined for the namespace is used to define    ingress rules.
+   > - To stop policy recommendations from being processed and updated for a    namespace, click the Action menu, Dismiss policy.
 
+3. Activate and review policy recommendations
+  
+   Policy recommendations are not enabled until you activate them and move them to the Active board.
 
+   From the Policy Recommendation board, select a policy recommendation (or bulk select) and select, Add to policy board. Click on the Active tab.
 
+   You can now view the activated policies in the Policies Board. In the left navbar, click Policies.
+
+   Policy recommendations are added to the namespace-isolation tier. Note the following:
+
+   - Staged network policy recommendations work like any other staged network policy.
+   - You cannot move recommended staged policies in the namespace-isolation tier.
+   - The name of the namespace-isolation tier is fixed and cannot be changed
+
+   You are now ready to observe traffic flows in Policies board to verify that the policy is authorizing traffic as expected. When a policy works as expected, you can safely enforce it.
 
 
 
