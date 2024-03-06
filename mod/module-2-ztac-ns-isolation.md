@@ -65,7 +65,27 @@ A global default deny policy ensures that unwanted traffic (ingress and egress) 
 
 By default, all traffic is allowed between the pods in a cluster. Let's start by testing connectivity between application components and across application stacks. All of these tests should succeed as there are no policies in place.
 
-We recommend creating a global default deny policy after you complete writing the policy for the traffic you want to allow. Use the stage policy feature to get your allowed traffic working as expected, then lock down the cluster to block unwanted traffic.
+We recommend creating a global default deny policy after you complete reviewing the policy for the traffic you want to allow. Use the stage policy feature to get your allowed traffic working as expected, then lock down the cluster to block unwanted traffic.
+
+1. In the left navbar in Manager UI, click **Policies, Recommendations**.
+2. On the opt-in page, click Enable Policy Recommendations.
+
+The Policy Recommendations board is automatically displayed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 1. Create a staged global default-deny policy. It will show all the traffic that would be blocked if it were enforced.
 
