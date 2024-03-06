@@ -27,7 +27,8 @@ Included in the `pre` folder, there is an application that will be used in the e
 
 There are also other objects that will be created. We will learn about them later in the workshop.
 
-   > **Note**: Wait until all the pods are up and running to move to the next step.
+> [!IMPORTANT]
+> Wait until all the pods are up and running to move to the next step.
 
 ## Service Graph and Flow Visualizer
 
