@@ -54,16 +54,12 @@ We recommend creating a global default deny policy after you complete reviewing 
    ![enable-policy-recommendation](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/56a8a8b3-654d-40f8-9e04-160ff1439efd)
 
 > [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
-
-   > [!NOTE]  
-   > Please note a few things:
-   > - A policy recommendation is generated for every namespace in your cluster (unless namespaces are filtered out by an Admin using the selector in the PolicyRecommendationScope resource).
-   > - Flow logs are continuously monitored for policy recommendations.
-   > - Recommended policies are continuously updated until you Add to policy board or Dismiss policy using the Actions menu.
-   > - Policy recommendations are created as staged network policies so you can safely observe the traffic before enforcing them.
-   > - Traffic originating from the recommended policy's namespace is used to generate egress rules, and traffic destined for the namespace is used to define ingress rules.
-   > - To stop policy recommendations from being processed and updated for a namespace, click the Action menu, Dismiss policy.
+> - A policy recommendation is generated for every namespace in your cluster (unless namespaces are filtered out by an Admin using the selector in the PolicyRecommendationScope resource).
+> - Flow logs are continuously monitored for policy recommendations.
+> - Recommended policies are continuously updated until you Add to policy board or Dismiss policy using the Actions menu.
+> - Policy recommendations are created as staged network policies so you can safely observe the traffic before enforcing them.
+> - Traffic originating from the recommended policy's namespace is used to generate egress rules, and traffic destined for the namespace is used to define ingress rules.
+> - To stop policy recommendations from being processed and updated for a namespace, click the Action menu, Dismiss policy.
 
 3. Activate and review policy recommendations
   
