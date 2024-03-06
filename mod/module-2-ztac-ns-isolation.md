@@ -64,8 +64,12 @@ We recommend creating a global default deny policy after you complete reviewing 
 3. Activate and review policy recommendations
   
    Policy recommendations are not enabled until you activate them and move them to the Active board.
+   
+   ![policy-recommendation](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/ccefd3ac-9c4e-4934-882b-b476e5057de9)
 
    From the Policy Recommendation board, select a policy recommendation (or bulk select) and select, Add to policy board. Click on the Active tab.
+
+   ![policy-recommendation](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/088112b2-ea72-4e8b-bc72-769e855a8828)
 
    You can now view the activated policies in the Policies Board. In the left navbar, click Policies.
 
