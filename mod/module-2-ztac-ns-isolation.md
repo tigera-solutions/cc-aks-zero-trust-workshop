@@ -40,26 +40,7 @@ Connect to Calico Cloud GUI. From the menu select `Service Graph > Flow Visualiz
 
 ![flow-visualization](https://user-images.githubusercontent.com/104035488/192358472-112c832f-2fd7-4294-b8cc-fec166a9b11e.gif)
 
-## Security Policies
-
-Calico Security Policies provide a richer set of policy capabilities than the native Kubernetes network policies, including:  
-
-- Policies that can be applied to any endpoint: pods/containers, VMs, and/or to host interfaces
-- Policies that can define rules that apply to ingress, egress, or both
-- Policy rules support:
-  - Actions: allow, deny, log, pass
-  - Source and destination match criteria:
-    - Ports: numbered, ports in a range, and Kubernetes named ports
-    - Protocols: TCP, UDP, ICMP, SCTP, UDPlite, ICMPv6, protocol numbers (1-255)
-    - HTTP attributes (if using Istio service mesh)
-    - ICMP attributes
-    - IP version (IPv4, IPv6)
-    - IP or CIDR
-    - Endpoint selectors (using label expression to select pods, VMs, host interfaces, and/or network sets)
-    - Namespace selectors
-    - Service account selectors
-
-### The Zero Trust approach
+## The Zero Trust approach
 
 A global default deny policy ensures that unwanted traffic (ingress and egress) is denied by default. Pods without policy (or incorrect policy) are not allowed traffic until the appropriate network policy is defined. Although the staging policy tool will help you find the incorrect or the missing policy, a global deny policy helps mitigate other lateral malicious attacks.
 
@@ -71,7 +52,6 @@ We recommend creating a global default deny policy after you complete reviewing 
 2. On the opt-in page, click Enable Policy Recommendations.
 
 The Policy Recommendations board is automatically displayed.
-
 
 ![enable-policy-recommendation](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/56a8a8b3-654d-40f8-9e04-160ff1439efd)
 
