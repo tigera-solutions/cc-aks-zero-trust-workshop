@@ -55,12 +55,12 @@ We recommend creating a global default deny policy after you complete reviewing 
 
    > [!NOTE]
    >
-   > - A policy recommendation is generated for every namespace in your cluster    (unless namespaces are filtered out by an Admin using the selector in the    PolicyRecommendationScope resource).
+   > - A policy recommendation is generated for every namespace in your cluster (unless namespaces are filtered out by an Admin using the selector in the PolicyRecommendationScope resource).
    > - Flow logs are continuously monitored for policy recommendations.
-   > - Recommended policies are continuously updated until you Add to policy board    or Dismiss policy using the Actions menu.
-   > - Policy recommendations are created as staged network policies so you can    safely observe the traffic before enforcing them.
-   > - Traffic originating from the recommended policy's namespace is used to    generate egress rules, and traffic destined for the namespace is used to define    ingress rules.
-   > - To stop policy recommendations from being processed and updated for a    namespace, click the Action menu, Dismiss policy.
+   > - Recommended policies are continuously updated until you Add to policy board or Dismiss policy using the Actions menu.
+   > - Policy recommendations are created as staged network policies so you can safely observe the traffic before enforcing them.
+   > - Traffic originating from the recommended policy's namespace is used to generate egress rules, and traffic destined for the namespace is used to define ingress rules.
+   > - To stop policy recommendations from being processed and updated for a namespace, click the Action menu, Dismiss policy.
 
 3. Activate and review policy recommendations
   
