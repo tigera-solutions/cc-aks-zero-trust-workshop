@@ -73,6 +73,7 @@ We recommend creating a global default deny policy after you complete reviewing 
 The Policy Recommendations board is automatically displayed.
 
 
+![enable-policy-recommendation](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/56a8a8b3-654d-40f8-9e04-160ff1439efd)
 
 
 
