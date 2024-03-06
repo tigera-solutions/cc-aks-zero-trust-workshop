@@ -54,6 +54,7 @@ We recommend creating a global default deny policy after you complete reviewing 
    ![enable-policy-recommendation](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/56a8a8b3-654d-40f8-9e04-160ff1439efd)
 
    > [!NOTE]
+   >
    > - A policy recommendation is generated for every namespace in your cluster    (unless namespaces are filtered out by an Admin using the selector in the    PolicyRecommendationScope resource).
    > - Flow logs are continuously monitored for policy recommendations.
    > - Recommended policies are continuously updated until you Add to policy board    or Dismiss policy using the Actions menu.
