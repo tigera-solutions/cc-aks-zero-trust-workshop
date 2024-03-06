@@ -61,17 +61,21 @@ We recommend creating a global default deny policy after you complete reviewing 
 > - Traffic originating from the recommended policy's namespace is used to generate egress rules, and traffic destined for the namespace is used to define ingress rules.
 > - To stop policy recommendations from being processed and updated for a namespace, click the Action menu, Dismiss policy.
 
-3. Activate and review policy recommendations
-  
-   Policy recommendations are not enabled until you activate them and move them to the Active board.
+3. Review the policy recommendations
    
+   After a few minuties, you will be able to see the policy recommendation. Take a minute to review the rules being suggested and ensure they align with your intentions.
+
    ![policy-recommendation](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/ccefd3ac-9c4e-4934-882b-b476e5057de9)
 
-   From the Policy Recommendation board, select a policy recommendation (or bulk select) and select, Add to policy board. Click on the Active tab.
+4. Activate policy recommendations
+  
+   From the Policy Recommendation board, select a policy recommendation (or bulk select) and select, `Add to policy board`. You can now view the active policies in the Policies Board. In the left navbar, click `Policies`.
 
    ![policy-recommendation](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/088112b2-ea72-4e8b-bc72-769e855a8828)
 
-   You can now view the activated policies in the Policies Board. In the left navbar, click Policies.
+5. View the active policies in Policy Recommendations.
+
+   Click on the `Active` tab in `Policy Recommendations`. Active policies were recommendations that were moved to the policy board.
 
    Policy recommendations are added to the namespace-isolation tier. Note the following:
 
@@ -80,83 +84,6 @@ We recommend creating a global default deny policy after you complete reviewing 
    - The name of the namespace-isolation tier is fixed and cannot be changed
 
    You are now ready to observe traffic flows in Policies board to verify that the policy is authorizing traffic as expected. When a policy works as expected, you can safely enforce it.
-
-
-
-
-
-
-
-
-
-
-1. Create a staged global default-deny policy. It will show all the traffic that would be blocked if it were enforced.
-
-   - Go to the `Policies Board`
-   - On the bottom of the tier box `default` click on `Add Policy`
-     - In the `Create Policy` page enter the policy name: `default-deny`
-     - On the `Applies To` session, click `Add Namespace Seletor`
-       First, lets apply only to the `vote` namespace
-       - Select Key... `kubernetes.io/metadata.name`
-       - =
-       - Select Value... `vote`
-     - On the field `Type` select both checkboxes: Ingress and Egress.
-     - You are done. Click `Stage` on the top-right of your page.
-
-   The staged policy does not affect the traffic directly but allows you to view the policy impact if it were to be enforced. You can see the denied traffic in the staged policy.
-
-2. Based on the application design, the `db` lists on port `5432` and receive connections from the `worker` and the `result` microservices.
-   Let's use the Calico Cloud UI to create a policy to microsegment this traffic.
-
-   - Go to the `Policies Board`
-   - On the bottom of the tier box `platform` click on `Add Policy`
-     - In the `Create Policy` page enter the policy name: `db`
-     - Change the `Scope` from `Global` to `Namespace` and select the namespace `vote`
-     - On the `Applies To` session, click `Add Label Seletor`
-       - Select Key... `app`
-       - =
-       - Select Value... `db`
-       - Click on `SAVE LABEL SELECTOR`
-     - On the field `Type` select the checkbox for Ingress.
-     - Click on `Add Ingress Rule`
-       - On the `Create New Policy Rule` window,
-         - Click on the `dropdown` with `Any Protocol`
-         - Change the radio button to `Protocol is` and select `TCP`
-         - In the field `To:` click on `Add Port`
-         - `Port is` 5432 - Save
-         - In the field `From:`, click `Add Label Seletor`
-           - Select Key... `app`
-           - =
-           - Select Value... `worker`
-           - Click on `SAVE LABEL SELECTOR`  
-           - On `OR`, click `Add Label Seletor`
-           - Select Key... `app`
-           - =
-           - Select Value... `result`
-           - Click on `SAVE LABEL SELECTOR`
-         - Click on the button `Save Rule`
-     - You are done. Click `Enforce` on the top-right of your page.
-
-3. Now that you learned how to create policies using Calico Cloud UI, go ahead and create microsegmentation policies for all other workloads in the application.
-
-4. If you create all the policies correctly, at some point, you will start seeing zero traffic being denied by your default-deny staged policy. At that point, you can go ahead and enforce the default-deny policy. Voilà! The vote namespace is now secure.
-
-### Bonus - About Tiers
-
-Tiers are a hierarchical construct used to group policies and enforce higher precedence policies that other teams cannot circumvent, providing the basis for **Identity-aware micro-segmentation**.
-
-All Calico and Kubernetes security policies reside in tiers. You can start “thinking in tiers” by grouping your teams and the types of policies within each group, such as security, platform, etc.
-
-Policies are processed in sequential order from top to bottom.
-
-![policy-processing](https://user-images.githubusercontent.com/104035488/206433417-0d186664-1514-41cc-80d2-17ed0d20a2f4.png)
-
-Two mechanisms drive how traffic is processed across tiered policies:
-
-- Labels and selectors
-- Policy action rules
-
-For more information about tiers, please refer to the Calico Cloud documentation [Understanding policy tiers](https://docs.calicocloud.io/get-started/tutorials/policy-tiers)
 
 ---
 
