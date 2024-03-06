@@ -77,6 +77,8 @@ We recommend creating a global default deny policy after you complete reviewing 
 
    Click on the `Active` tab in `Policy Recommendations`. Active policies were recommendations that were moved to the policy board.
 
+   ![active-policies](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/11782de7-a26a-4d3e-9e24-a800b77592d1)
+
    Policy recommendations are added to the namespace-isolation tier. Note the following:
 
    - Staged network policy recommendations work like any other staged network policy.
