@@ -23,7 +23,7 @@ In this module, we will learn how to use Calico to recommend and set up network 
 
 Included in the `pre` folder, there is an application that will be used in the exercises during the workshop. The diagram below shows how the elements of this application communicate between themselves.
 
-![vote](https://github.com/tigera-solutions/cc-eks-compliance/assets/104035488/142ea62b-be3e-4c37-b39c-b501e1834f89)
+![catfacts-application](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/868c7ccf-e215-41d6-91ab-635832700c50)
 
 There are also other objects that will be created. We will learn about them later in the workshop.
 
