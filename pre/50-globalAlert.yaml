@@ -1,0 +1,17 @@
+apiVersion: projectcalico.org/v3
+kind: GlobalAlert
+metadata:
+  name: security.sanctioned-access
+spec:
+  description: "worker pod trying to access sanctioned addresses"
+  summary: "[flows] [sanctioned-access] ${source_namespace}/${source_name_aggr} has tried to access ${dest_domains} at ${dest_ip}"
+  severity: 100
+  period: 1m
+  lookback: 1m
+  dataSet: flows
+  query: ((dest_name_aggr != "dog.ceo" AND dest_name_aggr != "catfact.ninja") AND source_name_aggr IN {worker}) AND (dest_port != 53 AND dest_port != 3306 AND dest_port != 80)
+  aggregateBy: [source_namespace, source_name_aggr, dest_name_aggr, dest_domains, dest_ip]
+  field: num_flows
+  metric: sum
+  condition: gt
+  threshold: 0

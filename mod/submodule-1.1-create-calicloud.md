@@ -12,4 +12,4 @@ This concludes the Calico Cloud trial account creation. You can log in back at a
 
 ---
 
-[:leftwards_arrow_with_hook: Back to Module 3 - Connect to Calico Cloud](modules/module-3-connect-calicocloud.md) 
+[:leftwards_arrow_with_hook: Back to Module 1 - Connect to Calico Cloud](/mod/module-1-connect-calicocloud.md) 

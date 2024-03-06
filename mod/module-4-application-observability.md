@@ -1,4 +1,4 @@
-# Module 7 - Application Level Observability
+# Module 4 - Application Level Observability
 
 L7 logs capture application interactions from HTTP header data in requests. Data shows what is actually sent in communications between specific pods, providing more specificity than flow logs. (Flow logs capture data only from connections for workload interactions).
 
@@ -9,7 +9,7 @@ L7 logs are visible in the Manager UI, service graph, in the HTTP tab.
 1. Configure Felix for log data collection
 
    Enable the Policy Sync API in Felix. For cluster-wide enablement, modify the default FelixConfiguration and set the field policySyncPathPrefix to /var/run/nodeagent.
-   
+
    ```bash
    kubectl patch felixconfiguration default --type='merge' -p '{"spec":{"policySyncPathPrefix":"/var/run/nodeagent"}}'
    ```
@@ -78,7 +78,7 @@ The DNS dashboard summarizes DNS data and logs into metrics, providing high-leve
 
 ---
 
-[:arrow_right: Module 8 - Clean up](/modules/module-8-clean-up.md)    <br>
+[:arrow_right: Module 5 - Clean up](/modules/module-8-clean-up.md)  <br>
 
-[:arrow_left: Module 6 - Ingress and Egress access control using NetworkSets](/modules/module-6-network-sets.md)    
+[:arrow_left: Module 3 - Workload Isolation with Microsegmentation](/mod/module-3-wkload-isolation.md)   
 [:leftwards_arrow_with_hook: Back to Main](/README.md)  

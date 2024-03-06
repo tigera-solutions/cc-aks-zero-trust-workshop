@@ -24,34 +24,47 @@ The estimated time to complete this workshop is 60-90 minutes.
 
 ### Learning Objectives
 
-1. Learn how to deploy zero-trust workload access controls
+1. Learn how to deploy zero-trust workload access controls with namespace isolation recommendations
 2. Extend firewall protection at the granular, workload level
 3. Block lateral movement of APTs with identity-aware microsegmentation
 4. Understand how to apply zero-trust security controls at application level.
 
+## Workshop Environment Preparation
+
+> [!WARNING]
+> **For this workshop, you are expected to have access to a previously created AKS cluster.**
+
+- Please, follow the instructions on the repository below if you don't have it ready:
+
+  [Calico Cloud on AKS - Workshop Environment Preparation](https://github.com/tigera-solutions/aks-workshop-prep)
+
+- We will run this workshop from the Azure Cloud Shell, as described in that repository.
+
+- To start your cluster, reload the environment variables create in your Azure Cloud Shell first and then start the cluster. Use the following command:
+
+  ```bash
+  source ~/workshopvars.env
+  az aks start --resource-group $RESOURCE_GROUP --name $CLUSTERNAME
+  ```
+
 ## Modules
 
 This workshop is organized in sequential modules. One module will build up on top of the previous module, so please, follow the order as proposed below.
- 
-Module 1 - [Getting Started](/modules/module-1-getting-started.md)  
-Module 2 - [Deploy an Azure AKS cluster](/modules/module-2-deploy-aks.md)  
-Module 3 - [Connect the Azure AKS cluster to Calico Cloud](/modules/module-3-connect-calicocloud.md)  
-Module 4 - [Zero-Trust Workload Access Control](/modules/module-4-workload-access-control.md)  
-Module 5 - [Identity-aware Microsegmentation](/modules/module-5-identity-aware-microsegmentation.md)  
-Module 6 - [Ingress and Egress access control using NetworkSets](/modules/module-6-network-sets.md)   
-Module 7 - [Application Level Observability](/modules/module-7-application-observability.md)    
-Module 8 - [Clean up](/modules/module-8-clean-up.md)  
 
---- 
+Module 1 - [Connect the Azure AKS cluster to Calico Cloud](/mod/module-1-connect-calicocloud.md)  
+Module 2 - [Zero-Trust Workload Access Control with Namespace Isolation Recommendation](/mod/module-2-ztac-ns-isolation.md)  
+Module 3 - [Workload Isolation with Microsegmentation](/mod/module-3-wkload-isolation.md)  
+Module 4 - [Application Level Observability](/mod/module-4-application-observability.md)  
+Module 5 - [Clean up](/mod/module-5-clean-up.md)  
 
-### Useful links
+## Useful links
 
 - [Project Calico](https://www.tigera.io/project-calico/)
 - [Calico Academy - Get Calico Certified!](https://academy.tigera.io/)
 - [O’REILLY EBOOK: Kubernetes security and observability](https://www.tigera.io/lp/kubernetes-security-and-observability-ebook)
 - [Calico Users - Slack](https://slack.projectcalico.org/)
 
-**Follow us on social media**
+**Follow us on social media:**
 
 - [LinkedIn](https://www.linkedin.com/company/tigera/)
 - [Twitter](https://twitter.com/tigeraio)
@@ -60,4 +73,5 @@ Module 8 - [Clean up](/modules/module-8-clean-up.md)
 - [Github](https://github.com/tigera-solutions/)
 - [Discuss](https://discuss.projectcalico.tigera.io/)
 
-> **Note**: The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how Calico Cloud can be configured to build a functional solution. These examples are not intended for use in production environments.
+> [!NOTE]
+> The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how Calico Cloud can be configured to build a functional solution. These examples are not intended for use in production environments.

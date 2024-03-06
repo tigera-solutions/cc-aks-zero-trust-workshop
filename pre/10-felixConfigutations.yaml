@@ -1,0 +1,15 @@
+apiVersion: projectcalico.org/v3
+kind: FelixConfiguration
+metadata:
+  name: default
+spec:
+  flowLogsFlushInterval: 15s
+  flowLogsFileAggregationKindForAllowed: 1
+  flowLogsEnableNetworkSets: true
+  dnsLogsFlushInterval: 15s
+  captureRotationSeconds: 300
+  l7LogsFlushInterval: 15s
+  l7LogsFileAggregationHTTPHeaderInfo: IncludeL7HTTPHeaderInfo
+  l7LogsFileAggregationSourceInfo: IncludeL7SourceInfo
+  l7LogsFileAggregationNumURLPath: 10
+  policySyncPathPrefix: /var/run/nodeagent

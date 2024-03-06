@@ -1,0 +1,11 @@
+apiVersion: operator.tigera.io/v1
+kind: ApplicationLayer
+metadata:
+  name: tigera-secure
+spec:
+  webApplicationFirewall: Disabled
+  logCollection:
+    collectLogs: Enabled
+    logIntervalSeconds: 5
+    logRequestsPerInterval: -1
+  applicationLayerPolicy: Disabled
