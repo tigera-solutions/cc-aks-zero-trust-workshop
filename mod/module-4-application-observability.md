@@ -39,7 +39,7 @@ L7 logs are visible in the Manager UI, service graph, in the HTTP tab.
    Annotate the frontend service to collect L7 logs as shown.
    
    ```bash
-   kubectl annotate svc frontend -n default projectcalico.org/l7-logging=true
+   kubectl annotate svc facts -n catfacts projectcalico.org/l7-logging=true
    ```
 
 ## Service Graph
@@ -78,7 +78,7 @@ The DNS dashboard summarizes DNS data and logs into metrics, providing high-leve
 
 ---
 
-[:arrow_right: Module 5 - Clean up](/modules/module-8-clean-up.md)  <br>
+[:arrow_right: Module 5 - Clean up](/mod/module-5-clean-up.md)  <br>
 
 [:arrow_left: Module 3 - Workload Isolation with Microsegmentation](/mod/module-3-wkload-isolation.md)   
 [:leftwards_arrow_with_hook: Back to Main](/README.md)  
