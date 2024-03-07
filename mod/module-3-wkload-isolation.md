@@ -6,6 +6,8 @@ If you need more restrictive policie, you can enforce controls on a fine-grained
 
 Let's use again the `Cat Facts Application` to demosntrate how to implement the microsegmentation by creating policies for each of the workloads, instead of creating a policy for the namespace.
 
+![catfacts-application](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/868c7ccf-e215-41d6-91ab-635832700c50)
+
 ## Security Policies
 
 Calico Security Policies provide a richer set of policy capabilities than the native Kubernetes network policies, including:  
