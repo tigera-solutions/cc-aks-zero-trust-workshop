@@ -98,11 +98,11 @@ We recommend creating a global default deny policy after you complete reviewing 
 
    ![active-policies](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/11782de7-a26a-4d3e-9e24-a800b77592d1)
 
-   Policy recommendations are added to the namespace-isolation tier. Note the following:
+   Policy recommendations are added to the `namespace-isolation` tier. Note the following:
 
    - Staged network policy recommendations work like any other staged network policy.
-   - You cannot move recommended staged policies in the namespace-isolation tier.
-   - The name of the namespace-isolation tier is fixed and cannot be changed
+   - You cannot move recommended staged policies in the `namespace-isolation` tier.
+   - The name of the `namespace-isolation` tier is fixed and cannot be changed
 
    You are now ready to observe traffic flows in Policies board to verify that the policy is authorizing traffic as expected. When a policy works as expected, you can safely enforce it.
 
