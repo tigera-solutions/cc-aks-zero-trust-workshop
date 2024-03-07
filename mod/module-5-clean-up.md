@@ -3,7 +3,7 @@
 1. Delete the applications stack to clean up any `loadbalancer` services.
 
    ```bash
-   kubectl delete -f pre/004-vote-app-manifest.yaml
+   kubectl delete -f pre/40-catfacts-app.yaml
    ```
 
 2. Delete the AKS cluster.
@@ -21,16 +21,16 @@
      --name $RESOURCE_GROUP
    ```
 
-5. Delete environment variables backup file.
+4. Delete environment variables backup file.
 
    ```bash
    rm ~/workshopvars.env
    ```
 
-6. Delete this cloned repository
+5. Delete this cloned repository
 
    ```bash
-   cd .. && rm -Rf cc-aks-kspm-compliance-bootcamp
+   cd .. && rm -Rf cc-aks-zero-trust-workshop
    ```
 
 ---
