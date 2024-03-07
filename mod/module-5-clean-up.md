@@ -34,7 +34,6 @@
    ```
 
 ---
+[:leftwards_arrow_with_hook: Back to Main](/README.md)  <br>
 
-[:arrow_left: Module 4 - Application Level Observability](/mod/module-4-application-observability.md)  <br>
-
-[:leftwards_arrow_with_hook: Back to Main](/README.md)
+[:arrow_left: Module 4 - Application Level Observability](/mod/module-4-application-observability.md)
