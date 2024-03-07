@@ -2,7 +2,7 @@
 
 Calico provides methods to enable fine-grained access controls between your microservices and external databases, cloud services, APIs, and other applications by using the workload access control with namespace isolation recommendation, as learned in the previous module. 
 
-If you need more restrictive policie, you can enforce controls on a fine-grained, per-pod basis using workload isolation with microsegmentation.
+If you need more restrictive policies, you can enforce controls on a fine-grained, per-pod basis using workload isolation with microsegmentation.
 
 Let's use again the `Cat Facts Application` to demosntrate how to implement the microsegmentation by creating policies for each of the workloads, instead of creating a policy for the namespace.
 
@@ -64,10 +64,10 @@ Calico Security Policies provide a richer set of policy capabilities than the na
 2. Now, let's use the `Recommend a Policy` feature to create the policies for the other workloads.
 
   Let's start with the `facts` workload.
+  
+  ![recommend-policy](https://github.com/tigera-solutions/cc-aks-zero-trust-workshop/assets/104035488/00e7418c-b4e5-4564-95d3-8270912e19b6)
 
-  <insert the image here!>
-
-3. Now that you learned how to create policies using Calico Cloud UI, go ahead and create microsegmentation policies for the `worker` workload.
+3. Now that you have learned how to create policies using Calico Cloud UI, go ahead and create microsegmentation policies for the `worker` workload.
 
 > [!TIP]
 >
@@ -78,11 +78,11 @@ If you create all the policies correctly, at some point, you will start seeing z
 
 > [!TIP]
 >
-> - After enfocing the default-deny policy, if you need to troubleshoot, use the Service Graph or the Flow Visualizations tools to see what traffic is being blocked.
+> - After enforcing the default-deny policy, if you need to troubleshoot, use the Service Graph or the Flow Visualizations tools to see what traffic is being blocked.
 
 ### Bonus - About Tiers
 
-Tiers are a hierarchical construct used to group policies and enforce higher precedence policies that other teams cannot circumvent, providing the basis for **Identity-aware micro-segmentation**.
+Tiers are a hierarchical construct used to group policies and enforce higher-precedence policies that other teams cannot circumvent, providing the basis for **Identity-aware micro-segmentation**.
 
 All Calico and Kubernetes security policies reside in tiers. You can start “thinking in tiers” by grouping your teams and the types of policies within each group, such as security, platform, etc.
 
